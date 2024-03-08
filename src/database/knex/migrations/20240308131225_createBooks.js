@@ -1,6 +1,6 @@
 
 exports.up = (knex) => {
-    return knex.schema.createTable("tasks", (table) => {
+    return knex.schema.createTable("books", (table) => {
         table.increments("id").primary();
         table.string("author").notNullable();
         table.string("title").notNullable();
