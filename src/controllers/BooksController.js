@@ -21,7 +21,7 @@ class BooksController{
             numberOfPages: book.numberOfPages,isAvaible: book.isAvaible,
             user_id: book.user_id})
 
-        return res.status(201).json("Tarefa criada com sucesso")
+        return res.status(201).json("Livro criada com sucesso")
     }
 
     async listBook(req, res) {
@@ -42,7 +42,7 @@ class BooksController{
 
         await knex("books").where({id}).update({author,title,description,numberOfPages,isAvaible})
  
-        return res.status(200).json("tarefa atualizado com sucesso!")
+        return res.status(200).json("Livro atualizado com sucesso!")
     }
 
     async deleteBook(req,res){
@@ -50,7 +50,7 @@ class BooksController{
 
         await knex("books").where({id}).delete()
 
-        return res.status(200).json("Tarefa deletada com sucesso!")
+        return res.status(200).json("Livro deletada com sucesso!")
 
     }
 
