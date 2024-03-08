@@ -4,7 +4,7 @@ const pool = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "task_manager"
+    database: "library_manager_with_knex"
 }).promise()
  
 async function connection() {
