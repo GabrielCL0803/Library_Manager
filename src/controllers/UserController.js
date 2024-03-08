@@ -4,7 +4,7 @@ class UserController{
     async createUser(req,res){
         const {name,email,telefone,created_at} = req.body
         
-        const user = await knex("users").insert({name, email, password, telefone, created_at})
+        const user = await knex("users").insert({name, email, telefone, created_at})
         return res.status(201).json("Usuário cadastrado com sucesso")
     }
 
