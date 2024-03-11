@@ -1,8 +1,8 @@
 const knex = require("../database/knex");
 
 async function checkBookExist(req,res,next) {
-    const {id} = req.params
-    const book = await knex("books").where({id})
+    const {idBook} = req.params
+    const book = await knex("books").where({idBook})
     
 
     if(book.length === 0 ){

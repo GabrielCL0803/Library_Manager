@@ -17,7 +17,7 @@ class UserController{
     async listUserById(req,res){
         const {user_id} = req.params
 
-        const [user] = await knex("users").where({id:user_id})
+        const [user] = await knex("users").where({idUser:user_id})
 
         return res.status(200).json(user)
     }
@@ -27,7 +27,7 @@ class UserController{
         const {user_id} = req.params
         const {name, email, telefone} = req.body
 
-        await knex("users").where({id:user_id}).update({name,email,telefone})
+        await knex("users").where({idUser:user_id}).update({name,email,telefone})
 
         return res.status(200).json("Usuário atualizado com sucesso!")
     }
@@ -35,7 +35,7 @@ class UserController{
     async deleteUser(req,res){
         const {user_id} = req.params
 
-        await knex("users").where({id:user_id}).delete()
+        await knex("users").where({idUser:user_id}).delete()
 
         return res.status(200).json("Registro deletado com sucesso!")
     }
