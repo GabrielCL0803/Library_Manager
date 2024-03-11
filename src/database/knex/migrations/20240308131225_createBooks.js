@@ -8,7 +8,6 @@ exports.up = (knex) => {
         table.integer("numberOfPages").notNullable();
         table.boolean("isAvaible").defaultTo("false")
 
-        table.integer("user_id").unsigned().index().references("id").inTable("users")
     });
 }
 
