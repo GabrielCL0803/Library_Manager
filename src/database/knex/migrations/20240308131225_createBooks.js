@@ -5,8 +5,10 @@ exports.up = (knex) => {
         table.string("author").notNullable();
         table.string("title").notNullable();
         table.string("description").notNullable();
-        table.integer("numberOfPages").notNullable();
-        table.boolean("isAvaible").defaultTo("true")
+        table.integer("pages").notNullable();
+        table.boolean("isAvailable").defaultTo("true");
+        table.timestamp("created_at").defaultTo(knex.fn.now());
+        table.timestamp("updated_at").defaultTo(knex.fn.now())
     });
 }
 
