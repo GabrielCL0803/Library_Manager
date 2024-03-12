@@ -4,7 +4,7 @@ exports.up = (knex) => {
         table.increments("idBook").primary();
         table.string("author").notNullable();
         table.string("title").notNullable();
-        table.string("description").notNullable();
+        table.string("category").notNullable();
         table.integer("pages").notNullable();
         table.boolean("isAvailable").defaultTo("true");
         table.timestamp("created_at").defaultTo(knex.fn.now());

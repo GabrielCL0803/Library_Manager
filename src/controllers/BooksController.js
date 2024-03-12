@@ -4,8 +4,12 @@ class BooksController{
 
 
     async createBook(req, res){
-        const {author, title, description, numberOfPages, isAvaible} = req.body
-        const book = await knex("books").insert({author,title,description,numberOfPages,isAvaible:true})
+        const {
+            author, 
+            title, 
+            category, 
+            pages} = req.body
+        await knex("books").insert({author,title,category,pages})
 
         return res.status(201).json("Livro criado com sucesso")
     }
