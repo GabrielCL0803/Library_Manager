@@ -5,5 +5,7 @@ const loanRoutes = Router()
 const loanController = new LoansController()
 
 loanRoutes.post("/:user_id/:book_id", loanController.borrowBooks)
+loanRoutes.get("/:user_id", loanController.listBorrowedBook)
+loanRoutes.get("/total/:user_id", loanController.totalBorrowedBooks)
 
 module.exports = loanRoutes
