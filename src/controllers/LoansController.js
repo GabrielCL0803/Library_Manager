@@ -4,6 +4,8 @@ class LoansController{
 
 
     async borrowBooks(req, res){
+        const {user_id, book_id} = req.params
+
         const book = await knex("books").where({idBook: book_id}).first()
         const user = await knex("users").where({idUser: user_id}).first()
 
