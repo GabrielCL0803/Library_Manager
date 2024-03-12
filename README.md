@@ -1,35 +1,44 @@
-# Iniciando o arquivo server.js sem knex
+# Projeto sem Banco de dados
 
-## Adicionando as pastas
-* src,controller,database,middlewares,routes
+## Instalação de Bibliotecas Digitais
+* express,mysql2,knex,nodemon
 * colocando server.js dentro de src
 
-# Configurando todos os index
-* knexfile,database,etc.
+# Instalação de arquivo para Biblioteca remota
+* src,server.js,controllers,database,middleware,routes
 
-# Colocando README.md dentro de src
-* Situação de todas as pastas Untracked
+# Inserção de arquivos na pasta controllers
+* BooksController.js
+* UserController.js
 
-# Criação das migrations com knex
-* Foi criado a tabela de "users" e "books", além da chave ja ter sido adicionada
+# Inserção de arquivos na pasta database e criação da pasta knex em  database
+* knex, migrations e index
 
-# Criação do UserController e BooksController 
-* Códigos feitos dentro desses files 
+# Inserção de arquivos na pasta middleware
+* CheckBookExist.js
+* CheckUserExist.js
 
-# Criação das rotas userRoutes e bookRoutes
-* na pasta routes
+# Inserção de arquivos na pasta routes
+* book.routes.js
+* user.routes.js
+* index.js
 
-# Reatualização do arquivo UserController.js e BooksController.js
-* Lógicas aprimoradas 
+# Inserção de dados em arquivos index e configuração da porta de entrada
+* linha de comandos em todos os index.js
+* porta de entrada em server.js 
 
-# Criando middlewares e verificação do livro
-* Se for falso não empresta
+# Criação do Banco de Dados e configuração de portas
+* nome do banco de dados
+* promise para compartilhar arquivos com banco
 
-# Checagem de dados e concerto de erros
-* Onde o servidor estava tendo falhas
+# Criação de tabelas no Banco de Dados
+* Usando VS Code
+* tabela createBooks.js e createUsers.js
 
-# Inserindo a checagem de livros
-* Colocando a checagem dos livros existentes em bookRoutes
+# Inserção de dados as tabelas do Banco de Dados
+* tabela de createUsers.js recebendo idUser,nome,email,telefone,created_at,book_id
+* tabela de createBooks.js recebendo idBook,author,title,description,numberOfPages,isAvaible
 
-# Inserindo funções delete em books e user e update em user
-* Melhorando/Adicionando mais funções
+# Inserção e criação de dados e comandos no arquivo UserController.js e BooksController.js
+* UserController.js recebendo createUser,listUser,listUserById,updateUser e deleteUser
+* BooksController.js recebendo createBook,listBook,listBookById e deleteBook
