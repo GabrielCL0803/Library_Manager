@@ -1,10 +1,9 @@
 const {Router} = require("express")
 const LoansController = require("../controllers/LoansController")
-const routes = require(".")
 
-const loansRoutes = Router()
-const loansController = new LoansController()
+const loanRoutes = Router()
+const loanController = new LoansController()
 
-loansRoutes.post("/:user_id/:book_id", loansController.borrowBooks)
+loanRoutes.post("/:user_id/:book_id", loanController.borrowBooks)
 
-module.exports = routes
+module.exports = loanRoutes
